@@ -1,14 +1,22 @@
-import React, { Component } from 'react';
-import { Text, StyleSheet } from 'react-native';
+import React, { PureComponent } from 'react';
+import { Text, StyleSheet, Button } from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
 
-class HomeView extends Component {
+class HomeView extends PureComponent {
+    switchPage = () => this.props.navigation.navigate('SECOND');
+
     render() {
+        const { state } = this.props.navigation;
+        const { params } = state;
+        const name = (params && params.name.length > 0) ? params.name : 'Stranger';
+        const message = `Hello ${name}!`;
+
         return (
             <LinearGradient colors={['#650aff', '#f4a']} style={styles.container} >
                 <Text style={styles.text}>
-                    Sample Text
+                    { message }
                 </Text>
+                <Button onPress={this.switchPage} title={'Next screen'} />
             </LinearGradient>
         );
     }
@@ -19,7 +27,6 @@ const styles = StyleSheet.create({
         flex: 1,
         justifyContent: 'center',
         alignItems: 'center',
-        backgroundColor: '#06f'
     },
     text: {
         paddingBottom: 14,

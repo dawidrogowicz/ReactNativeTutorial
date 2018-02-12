@@ -1,19 +1,19 @@
 import React from 'react';
 import { StyleSheet, View } from 'react-native';
-import HomeView from './components/HomeView';
+import Routing from './components/Routing';
 
 export default class App extends React.Component {
-  render() {
-    return (
-      <View style={styles.container}>
-        <HomeView />
-      </View>
-    );
-  }
+    render() {
+        return (
+            <View style={styles.container}>
+                <Routing />
+            </View>
+        );
+    }
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-  },
+    container: {
+        flex: 1,
+    },
 });
