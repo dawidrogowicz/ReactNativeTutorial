@@ -1,5 +1,10 @@
 # React Native
 
+## Introduction
+If you're a front-end or mobile developer, chances are that you've already heard of react-native.
+React Native let's you build mobile applications, for both Androd and iOS platforms using the same code.
+It's worth to mention that those are real applications same as you would make in Java, Kotlin or Objective-C.
+React Native is almost identicall to React, you will see it yourself after we finish building our first simple application.
 
 ## Initializing project with Create React Native App
 Install `create-react-native-app` globally using npm or yarn, although as of now it's not recommended to use npm version 5, you should rather downgrade it to 4 or use yarn instead.
